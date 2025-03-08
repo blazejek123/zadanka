@@ -1,0 +1,33 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function okno_zamknij() {window.close();}
+        
+        var pudelko = {
+            material: 'karton',
+            glebokosc: '20cm',
+            kolor: 'czerwony',
+            pudelko_wyswietl_chomicz: function () {
+                document.write('Obiekt: Pudełko<br>');
+                document.write('Pola: materiał, głębokość, kolor<br>');
+                document.write('Metoda: pudelko_wyswietl_chomicz<br>');
+                document.write('Materiał: ' + this.material + '<br>');
+                document.write('Głębokość: ' + this.glebokosc + '<br>');
+                document.write('Kolor: ' + this.kolor + '<br>');
+            }
+        };
+        
+        pudelko.rozmiar = '30x30x30cm';
+        pudelko.pudelko_pokaz_chomicz = function() {
+            document.write('Nowe pole: rozmiar<br>');
+            document.write('Nowa metoda: pudelko_pokaz_chomicz<br>');
+            document.write('Rozmiar: ' + this.rozmiar + '<br>');
+        };
+    </script>
+</head>
+<body>
+    <button onclick="pudelko.pudelko_wyswietl_chomicz()">Pokaż dane Pudełka</button>
+    <button onclick="pudelko.pudelko_pokaz_chomicz()">Pokaż nową właściwość</button>
+    <button onclick="okno_zamknij()">Zamknij okno</button>
+</body>
+</html>

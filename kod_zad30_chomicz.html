@@ -1,0 +1,38 @@
+<html>
+<body>
+<textarea cols="60" rows="40">
+<html>
+ <head>
+ <script type="text/javascript">
+   function okno_zamknij() {window.close()}
+
+ var pudelko = {
+    material: 'karton',
+    glebokosc: '20cm',
+    kolor: 'czerwony',
+pudelko_wyswietl_nazwisko: function ()
+{
+ document.write( 'material: ' + this.material + '<br>')
+ document.write( 'glebokosc: ' + this.glebokosc + '<br>')
+ document.write( 'kolor: ' + this.kolor + '<br>')
+ }
+}
+pudelko.pudelko_wyswietl_nazwisko ();
+ </script>
+ </head>
+<body>
+<br>
+ Programowanie obiektowe. <br>
+ Obiekt to Pudelko<br>
+ material:<br>
+ glebokosc<br>
+ kolor<br>
+ metoda: pokaz<br>
+ <br>
+
+   <button onclick="okno_zamknij()">zamknij okno</button>
+</body>
+</html>
+</textarea>
+</body>
+</html>

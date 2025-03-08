@@ -1,0 +1,51 @@
+<html>
+<body>
+<textarea cols=90" rows="55">
+<html>
+<head>
+    <title>Trójkąt</title>
+    <script>
+        function AB_cho() {
+            var xa = parseFloat(document.formularz.xa.value);
+            var ya = parseFloat(document.formularz.ya.value);
+            var xb = parseFloat(document.formularz.xb.value);
+            var yb = parseFloat(document.formularz.yb.value);
+            var wynik = Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+            document.getElementById('wynik').innerHTML = 'Długość AB: ' + wynik.toFixed(2);
+        }
+
+        function BC_cho() {
+            var xb = parseFloat(document.formularz.xb.value);
+            var yb = parseFloat(document.formularz.yb.value);
+            var xc = parseFloat(document.formularz.xc.value);
+            var yc = parseFloat(document.formularz.yc.value);
+            var wynik = Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+            document.getElementById('wynik').innerHTML = 'Długość BC: ' + wynik.toFixed(2);
+        }
+
+        function AC_cho() {
+            var xa = parseFloat(document.formularz.xa.value);
+            var ya = parseFloat(document.formularz.ya.value);
+            var xc = parseFloat(document.formularz.xc.value);
+            var yc = parseFloat(document.formularz.yc.value);
+            var wynik = Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+            document.getElementById('wynik').innerHTML = 'Długość AC: ' + wynik.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Oblicz długości boków trójkąta</h1>
+    <form name="formularz">
+        Punkt A: <input type="text" name="xa"> <input type="text" name="ya"><br><br>
+        Punkt B: <input type="text" name="xb"> <input type="text" name="yb"><br><br>
+        Punkt C: <input type="text" name="xc"> <input type="text" name="yc"><br><br>
+    </form>
+    <input type="button" value="Oblicz AB" onclick="AB_cho()">
+    <input type="button" value="Oblicz BC" onclick="BC_cho()">
+    <input type="button" value="Oblicz AC" onclick="AC_cho()">
+    <div id="wynik" style="color:red; font-size:20px; margin-top:20px;"></div>
+</body>
+</html>
+</textarea>
+</body>
+</html>

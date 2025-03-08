@@ -1,0 +1,70 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function okno_zamknij() {
+            window.close();
+        }
+
+        // Konstruktor klasy Pudelko
+        function Pudelko(kolor_pudelka, glebokosc_pudelka, material_pudelka) {
+            this.kolor = kolor_pudelka;
+            this.glebokosc = glebokosc_pudelka;
+            this.material = material_pudelka;
+        }
+
+        // Dodanie metody do prototypu klasy Pudelko
+        Pudelko.prototype.pokaz = function () {
+            document.body.innerHTML =
+                '<h2>Obiekt: Pudełko</h2>' +
+                '<p>Pola:</p>' +
+                '<p>Kolor: ' + this.kolor + '</p>' +
+                '<p>Głębokość: ' + this.glebokosc + '</p>' +
+                '<p>Materiał: ' + this.material + '</p>' +
+                '<button onclick="wrocNaGlowna()">Wróć na główną</button>';
+        };
+
+        // Tworzymy obiekty Pudelko
+        var pudelko1 = new Pudelko('czerwony', '20 cm', 'karton');
+        var pudelko2 = new Pudelko('zielony', '30 cm', 'plastik');
+        var pudelko3 = new Pudelko('niebieski', '40 cm', 'drewno');
+
+        // Dodajemy nowe pole
+        Pudelko.prototype.cena = '15.00 PLN';
+
+        // Dodanie metody pokazującej nowe pole
+        Pudelko.prototype.pudelko_pokaz_cena = function () {
+            document.body.innerHTML =
+                '<h2>Nowe Pole</h2>' +
+                '<p>Nowa właściwość: cena = ' + this.cena + '</p>' +
+                '<button onclick="wrocNaGlowna()">Wróć na główną</button>';
+        };
+
+        // Funkcja do przeładowania strony
+        function wrocNaGlowna() {
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+    <br>
+    <h2>Programowanie obiektowe</h2>
+    <p>Obiekt to pudełko</p>
+    <p>Pola:</p>
+    <ul>
+        <li>kolor</li>
+        <li>glebokość</li>
+        <li>materiał</li>
+    </ul>
+    <p>Metoda: pokaz</p>
+    <p>Nowe pole: cena</p>
+    <p>Nowa metoda: pudełko_pokaz_cena()</p>
+    <br>
+    <button onclick="pudelko1.pokaz();">Pokaż obiekt 1</button>
+    <button onclick="pudelko2.pokaz();">Pokaż obiekt 2</button>
+    <button onclick="pudelko3.pokaz();">Pokaż obiekt 3</button>
+    <button onclick="pudelko1.pudelko_pokaz_cena();">Pokaż nowe pole</button>
+    <br><br>
+    <button onclick="okno_zamknij()">Zamknij okno</button>
+    <br><br>
+</body>
+</html>
